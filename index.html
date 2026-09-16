@@ -1,0 +1,320 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before You Go</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #0d0d0f;
+            color: #f1eee8;
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 25px;
+        }
+
+        /* OPENING */
+        .opening {
+            text-align: center;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .opening small {
+            color: #999;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            margin-bottom: 30px;
+        }
+
+        .opening h1 {
+            font-size: clamp(45px, 10vw, 90px);
+            font-weight: normal;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .opening p {
+            color: #aaa;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .btn {
+            margin-top: 45px;
+            padding: 14px 30px;
+            border: 1px solid #555;
+            border-radius: 30px;
+            background: transparent;
+            color: #eee;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #eee;
+            color: #111;
+        }
+
+        /* LETTER */
+        .letter-section {
+            background: #121216;
+        }
+
+        .letter {
+            max-width: 700px;
+            width: 100%;
+            line-height: 2;
+            font-size: 18px;
+            color: #d7d3cc;
+        }
+
+        .letter .date {
+            font-family: Arial, sans-serif;
+            color: #777;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 45px;
+        }
+
+        .letter h2 {
+            font-size: 38px;
+            font-weight: normal;
+            margin-bottom: 35px;
+            color: #f5f2eb;
+        }
+
+        .letter p {
+            margin-bottom: 25px;
+        }
+
+        /* WORDS */
+        .words {
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .words p {
+            max-width: 700px;
+            font-size: clamp(25px, 5vw, 45px);
+            line-height: 1.5;
+            color: #e8e4dc;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 1s ease;
+        }
+
+        .words p.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* LAST */
+        .last {
+            text-align: center;
+            flex-direction: column;
+            background: #09090a;
+        }
+
+        .last small {
+            color: #777;
+            letter-spacing: 3px;
+            font-family: Arial, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .last h2 {
+            font-size: clamp(35px, 7vw, 65px);
+            font-weight: normal;
+            line-height: 1.3;
+            max-width: 800px;
+        }
+
+        .last p {
+            margin-top: 45px;
+            color: #888;
+            font-size: 16px;
+        }
+
+        .signature {
+            margin-top: 60px;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        /* FADE */
+        .fade {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: 1.2s ease;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* SCROLL DOWN */
+        .scroll {
+            position: absolute;
+            bottom: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #666;
+            animation: floating 2s infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(7px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- OPENING -->
+    <section class="opening">
+        <small>for someone who once mattered</small>
+
+        <h1>Untuk Aas Aurum R.</h1>
+
+        <p>
+            Ada beberapa hal yang mungkin lebih mudah
+            ditulis daripada diucapkan.
+        </p>
+
+        <button class="btn" onclick="goToLetter()">
+            Buka suratnya
+        </button>
+
+        <div class="scroll">SCROLL</div>
+    </section>
+
+
+    <!-- LETTER -->
+    <section class="letter-section" id="letter">
+        <div class="letter fade">
+
+            <div class="date">
+                16 — 09 — 2026
+            </div>
+
+            <h2>As,</h2>
+
+            <p>
+                maaf banget, maaf banget kalo chatan kemarin² dikit bgt yang gua bales, bahkan emang ada yg sengaja ga gua bales, gua mencoba buat ga ngerespon elu karena gua takut gabisa lepas dari lu. boong rasanya as gua bisa lepas dari lu, yg selama ini gua bilang udah move on, itu cuma boongan.
+                pasti ada aja gua ngerasa kangen, ke elu ataupun kenangannya. gua jg gangerti kenapa masih ngerasa kaya gini, gua udah nyoba move on, jujur aja, gua sempet suka sama tari, cuma entah kenapa gua masih kebayang elu, jadi gua lebih milih ngejauhin tari karna gua gamau jg nyakitin anak orang.
+            </p>
+
+            <p>
+                maaf juga buat respon gua yang kasar, gua gamau elu jadi suka lagi sama gua, makanya gua sering semangatin lu move on. boong jg rasanya gua gamau balikan WKKWKWKW, gua mau bgt, cuma deep down gua ngerasa diri gua belum siap buat ngebangun hubungan lagi,  mau sama elu atau siapapun, masih terlalu banyak kurangnya, takutnya malah keulang lagi kan. oiya, sbnrnya ga semua foto elu gua apus wkwkwk, gua kadang masi ngerasa kangen aja, barang yg elu kasih jg masih gua simpen semua, kadang masih suka gua baca ulang surat dari elu, tapi akhirnya malah ngerasa sedih hahahaha.
+            </p>
+
+            <p>
+                anywayy, gua udh buka ig yang lu kasih, udah liat jg beberapa postingannya, semoga elu long last ya sama orang baru di sana, gua jg ikut ngerasa seneng kalo elu udah berhasil move on. semoga bisa bahagia juga di sana,.kalo elu ngechat tentang masalah internal lu, kadang gua suka sedih jg deh, walaupun dikit bgt gua bales haha, jahat deh gua ya. semoga jgn sampe keluar lagi ya chatan gitu,  elu masih berhak hidup bahagia ko. malah jadi gua yg kalah ya belum move on jg wkwkwk haduhh
+            </p>
+
+            <p>
+                .
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- WORDS -->
+    <section class="words">
+
+        <p class="word">
+            happy for you karena sudah berhasil move on...
+        </p>
+
+        <p class="word">
+            semoga lebih bahagia ya as.
+        </p>
+
+    </section>
+
+
+    <!-- LAST -->
+    <section class="last">
+
+        <small>ONE LAST THING</small>
+
+        <h2 class="fade">
+            Semoga setelah ini,<br>
+            hidup memperlakukanmu dengan baik.
+        </h2>
+
+
+        <div class="signature fade">
+            — dari BiNtAnG.
+        </div>
+
+    </section>
+
+
+    <script>
+
+        function goToLetter() {
+            document.getElementById("letter").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+
+        // Fade in saat elemen masuk layar
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+
+                });
+            },
+            {
+                threshold: 0.2
+            }
+        );
+
+
+        document.querySelectorAll(".fade, .word")
+            .forEach(element => observer.observe(element));
+
+    </script>
+
+</body>
+</html>
+```
