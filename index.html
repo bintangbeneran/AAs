@@ -287,9 +287,11 @@
     <script>
 
         function goToLetter() {
-    const music = document.getElementById("music");
+            const music = document.getElementById("music");
 
-    music.play();
+    music.play().catch(error => {
+        console.log("Musik tidak dapat diputar:", error);
+    });
 
     document.getElementById("letter").scrollIntoView({
         behavior: "smooth"
@@ -318,9 +320,11 @@
             .forEach(element => observer.observe(element));
 
     </script>
+    
 <audio id="music" loop>
     <source src="lagu.mp3" type="audio/mpeg">
 </audio>
+
 </body>
 </html>
 ```
