@@ -6,6 +6,20 @@
     <title>Before You Go</title>
     
    <style>
+       .last-photo {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 40px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.last-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 * {
     margin: 0;
@@ -88,11 +102,13 @@ section {
             margin-bottom: 30px;
         }
 
-        .opening h1 {
-            font-size: clamp(45px, 10vw, 90px);
-            font-weight: normal;
-            letter-spacing: -2px;
-            margin-bottom: 25px;
+       .opening h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    font-weight: normal;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    max-width: 550px;
+}
         }
 
         .opening p {
@@ -307,21 +323,24 @@ section {
 
 
     <!-- LAST -->
-    <section class="last">
+  <section class="last">
 
-        <small>ONE LAST THING</small>
+    <small>ONE LAST THING</small>
 
-        <h2 class="fade">
-            Semoga setelah ini,<br>
-            hidup memperlakukanmu dengan baik.
-        </h2>
+    <div class="last-photo fade">
+        <img src="bg2.jpeg" alt="Foto">
+    </div>
 
+    <h2 class="fade">
+        Semoga setelah ini,<br>
+        hidup memperlakukanmu dengan baik.
+    </h2>
 
-        <div class="signature fade">
-            — dari BiNtAnG.
-        </div>
+    <div class="signature fade">
+        — dari BiNtAnG.
+    </div>
 
-    </section>
+</section>
 
 
     <script>
