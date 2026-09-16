@@ -6,23 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Before You Go</title>
     
-.photo-box {
-    width: 280px;
-    height: 320px;
-    margin: 30px auto;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-}
-
-.photo-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
     <style>
         * {
             margin: 0;
@@ -37,7 +20,7 @@
         body {
     font-family: Georgia, 'Times New Roman', serif;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
         url('bg.jpeg');
     background-size: cover;
     background-position: center;
@@ -56,10 +39,31 @@
 
         /* OPENING */
         .opening {
-            text-align: center;
-            position: relative;
-            flex-direction: column;
-        }
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+
+    padding: 60px 30px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("foto.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
 
         .opening small {
             color: #999;
@@ -234,9 +238,7 @@
             Ada beberapa hal yang mungkin lebih mudah
             ditulis daripada diucapkan.
         </p>
-<div class="photo-box">
-    <img src="bg.jpeg" alt="Foto">
-</div>
+        
         <button class="btn" onclick="goToLetter()">
             Buka suratnya
         </button>
